@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<flow name="anotherFlow" doc:id="655af7b4-2906-4519-87dc-a1ad00043fcc" >
+		<http:listener doc:name="Listener" doc:id="63e2a55a-c411-4382-af6f-0ac7d6513b15" config-ref="HTTP_Listener_config" path="linus"/>
+		<logger level="INFO" doc:name="Logger" doc:id="63c7177b-4b56-4a27-92e6-fac152ab6e69" message="'yes i have don it'"/>
+	</flow>
+</mule>

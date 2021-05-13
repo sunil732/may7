@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="77363205-844f-4d0e-acf1-64f30155cdb9" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="ndemoFlow" doc:id="f465bf40-704b-4e76-b4d3-0dd6bf0db314" >
+		<http:listener doc:name="Listener" doc:id="d242c06e-f1b7-466a-9105-59188aabd748" config-ref="HTTP_Listener_config" path="/gittest"/>
+		<set-payload value="'git for new testing'" doc:name="Set Payload" doc:id="8788a53c-c16a-4283-ade5-32d5c4325219" />
+		<logger level="INFO" doc:name="Logger" doc:id="d0f87b60-683d-4754-9ace-76034fd4f8e6" message="#[payload]"/>
+	</flow>
+</mule>

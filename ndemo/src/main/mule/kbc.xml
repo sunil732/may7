@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<flow name="kbcFlow" doc:id="fe2bb047-9240-46c8-965e-8d8788940fef" >
+		<http:listener doc:name="Listener" doc:id="4101f6bb-2892-4a92-b6b3-b55c5e1bc179" config-ref="HTTP_Listener_config" path="/sunil"/>
+		<logger level="INFO" doc:name="Logger" doc:id="032576bb-b83a-4f83-9cd8-c181f7586467" message="'sunil'"/>
+		<logger level="INFO" doc:name="Logger" doc:id="8092b65f-6e07-479b-af34-e08335822ea6" message='"some changes shold reflect "'/>
+	</flow>
+</mule>
